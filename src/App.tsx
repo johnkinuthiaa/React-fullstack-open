@@ -1,8 +1,9 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
+import Anecdotes from "./ComponentStateAndEventHandlers/Anecdotes.tsx";
 // import MultipleComponents from "./lesson1/MultipleComponents.tsx";
 // import Props from "./lesson1/Props.tsx";
-import StateManagement from "./ComponentStateAndEventHandlers/StateManagement.tsx";
+// import StateManagement from "./ComponentStateAndEventHandlers/StateManagement.tsx";
 
 function App() {
     return (
@@ -10,7 +11,8 @@ function App() {
         {/*<Lesson1/>*/}
         {/*<MultipleComponents/>*/}
         {/*<Props/>*/}
-        <StateManagement/>
+        {/*<StateManagement/>*/}
+        <Anecdotes/>
     </div>
   )
 }

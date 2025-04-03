@@ -17,6 +17,7 @@ const StateManagement =()=>{
         <div>
             <div>value: {value}</div>
             <div>
+                {/* we use the onclick function to handle clicks...it takes in a callback function */}
                 <button onClick={()=>setCount(count+1)}>+</button>
                 <div>{count}</div>
                 <button onClick={()=>count>0&&setCount(count-1)}>-</button>
