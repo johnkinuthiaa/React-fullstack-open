@@ -1,10 +1,14 @@
-
+import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
+import MultipleComponents from "./lesson1/MultipleComponents.tsx";
+import Props from "./lesson1/Props.tsx";
 
 function App() {
-  return (
+    return (
     <div>
-      hello react again!!!
+        <Lesson1/>
+        <MultipleComponents/>
+        <Props/>
     </div>
   )
 }
