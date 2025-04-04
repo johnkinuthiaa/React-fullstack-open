@@ -14,7 +14,51 @@
       "id": "3",
       "content": "GET and POST are the most important methods of HTTP protocol",
       "important": true
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": "bb37",
+      "newNote": {
+        "content": "this is a new note",
+        "id": "31",
+        "important": false
+      }
+    },
+    {
+      "id": "90ff",
+      "newNote": {
+        "content": "this is a new note",
+        "id": "31",
+        "important": false
+      }
+    },
+    {
+      "id": "3cb4",
+      "newNote": {
+        "content": "this is a new note",
+        "id": "31",
+        "important": false
+      }
+    },
+    {
+      "id": "4d80",
+      "newNote": {
+        "content": "this is a new note man",
+        "id": 4,
+        "important": false
+      }
+    },
+    {
+      "id": "57ba",
+      "newNote": {
+        "content": "this is a new note man",
+        "id": 4,
+        "important": false
+      }
     }
   ]
 }
-
