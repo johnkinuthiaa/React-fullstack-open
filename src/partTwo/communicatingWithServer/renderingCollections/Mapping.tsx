@@ -1,3 +1,5 @@
+import ReduceArr from "./ReduceArr.tsx";
+
 type NoteProps ={
     id:number,
     content:string,
@@ -24,14 +26,13 @@ const Mapping =()=>{
     return(
         <div>
         {/*    rendering the notes - we use the map method*/}
-            {notes.map(({id,content,important}:NoteProps,index)=>(
+            {notes.map(({id,content}:NoteProps,index)=>(
                 <div key={index}>
                     <p>{id}</p>
                     <p>{content}</p>
-                    <p>{important}</p>
-
                 </div>
             ))}
+            <ReduceArr/>
 
         </div>
     )
