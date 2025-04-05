@@ -16,7 +16,7 @@
       "important": true
     },
     {
-      "id": 0,
+      "id": "0",
       "content": "",
       "important": false
     },
@@ -59,6 +59,95 @@
         "id": 4,
         "important": false
       }
+    },
+    {
+      "id": "fbfb",
+      "newNote": {
+        "id": 0,
+        "content": "",
+        "important": false
+      }
+    },
+    {
+      "id": "da68",
+      "newNote": {
+        "content": "i love notes",
+        "id": 10,
+        "important": false
+      }
+    },
+    {
+      "id": "20e7",
+      "newNote": {
+        "content": "i love notes",
+        "id": 10,
+        "important": false
+      }
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 13,
+      "content": "please work",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 15,
+      "content": "this should work",
+      "important": false
+    },
+    {
+      "id": 15,
+      "content": "new content mahn",
+      "important": false
+    },
+    {
+      "id": 15,
+      "content": "destructured object",
+      "important": false
+    },
+    {
+      "id": 15,
+      "content": "destructured object",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 0,
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 24,
+      "content": "who broke this",
+      "important": false
     }
   ]
 }

@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 
+import notes from "./services/notes.ts";
+
 type NoteProps ={
     id:number,
     content:string,
@@ -9,8 +11,8 @@ type NoteProps ={
 const DataFetching =()=>{
 
     useEffect(() => {
-        fetchData().then(()=>console.log("data fetched")).catch((e)=> {
-            throw new Error(e+"<<<<<<<")
+        notes.fetchData().then((response)=>typeof(response) !=="undefined"&&setNotes(response)).catch((e)=> {
+            setMessage(new Error(e+"Error fetching data").message)
         })
     }, []);
 
@@ -20,47 +22,19 @@ const DataFetching =()=>{
         important:false
     })
     const[inputContent,setInputContent] =useState<string>("")
-    const[notes,setNotes] =useState<NoteProps[]>([])
-
-    const myHeaders =new Headers()
-    myHeaders.append("Content-Type","application/json")
-
-    // fetching the data from the server
-
-    const fetchData =(async ()=>{
-        const response = await fetch("http://localhost:3001/notes",{
-            method:"GET",
-            headers:myHeaders
-        })
-        if(response.ok){
-            const data =await response.json()
-            setNotes(data)
-        }
-    })
-
-    // posting to the server
-    const postNote =async ()=>{
-        const response =await fetch("http://localhost:3001/notes",{
-            method:"POST",
-            headers:myHeaders,
-            body:JSON.stringify({newNote})
-        })
-        if(response.ok){
-            const data =await response.json()
-            console.log(data.toString() +"<<<")
-        }
-    }
-
+    const[notess,setNotes] =useState<NoteProps[]>([])
+    const[message,setMessage] =useState<string>("")
     return(
         <div>
-            {notes.map(({content}:NoteProps,index:number) =>(
+            {message&&<div style={{color:"red"}}>{message}</div>}
+            {notess.map(({content}:NoteProps,index:number) =>(
                 <div key={index}>{content}</div>
             ))}
 
             <form onSubmit={(e)=>{
                 e.preventDefault()
-                setNewNote({content: inputContent, id: notes.length+1, important: false})
-                postNote()
+                setNewNote({content: inputContent, id: notess.length+1, important: false})
+                notes.postNote(newNote).then((response)=>console.log(response))
             }}>
                 <input
                     type={"text"}
