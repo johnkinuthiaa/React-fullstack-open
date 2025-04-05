@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 
+// this is the notes from the service class...it provides us with crud for the notes
 import notes from "./services/notes.ts";
 
 type NoteProps ={
@@ -7,7 +8,6 @@ type NoteProps ={
     content:string,
     important:boolean
 }
-
 const DataFetching =()=>{
 
     useEffect(() => {
