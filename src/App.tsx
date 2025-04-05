@@ -1,6 +1,7 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
-import DataFetching from "./partTwo/communicatingWithServer/fetchingData/DataFetching.tsx";
+// import DataFetching from "./partTwo/communicatingWithServer/fetchingData/DataFetching.tsx";
+import ExchangeView from "./partTwo/communicatingWithServer/exchangeRateApi/ExchangeView.tsx";
 // import Forms from "./partTwo/communicatingWithServer/forms/Forms.tsx";
 // import Mapping from "./partTwo/communicatingWithServer/renderingCollections/Mapping.tsx";
 // import Anecdotes from "./partOne/ComponentStateAndEventHandlers/Anecdotes.tsx";
@@ -18,7 +19,8 @@ function App() {
         {/*<Anecdotes/>*/}
         {/*<Mapping/>*/}
         {/*<Forms/>*/}
-        <DataFetching/>
+        {/*<DataFetching/>*/}
+        <ExchangeView/>
     </div>
   )
 }
