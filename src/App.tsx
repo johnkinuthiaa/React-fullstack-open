@@ -1,7 +1,10 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
+// import UseReducersHook from "./stateManagement/UseReducersHook.tsx";
+import Memo from "./stateManagement/Memo.tsx";
+// import UseStateHook from "./stateManagement/UseStateHook.tsx";
 // import DataFetching from "./partTwo/communicatingWithServer/fetchingData/DataFetching.tsx";
-import ExchangeView from "./partTwo/communicatingWithServer/exchangeRateApi/ExchangeView.tsx";
+// import ExchangeView from "./partTwo/communicatingWithServer/exchangeRateApi/ExchangeView.tsx";
 // import Forms from "./partTwo/communicatingWithServer/forms/Forms.tsx";
 // import Mapping from "./partTwo/communicatingWithServer/renderingCollections/Mapping.tsx";
 // import Anecdotes from "./partOne/ComponentStateAndEventHandlers/Anecdotes.tsx";
@@ -20,7 +23,9 @@ function App() {
         {/*<Mapping/>*/}
         {/*<Forms/>*/}
         {/*<DataFetching/>*/}
-        <ExchangeView/>
+        {/*<ExchangeView/>*/}
+        {/*<UseReducersHook/>*/}
+        <Memo/>
     </div>
   )
 }
