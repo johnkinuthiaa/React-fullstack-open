@@ -1,7 +1,8 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
 // import UseReducersHook from "./stateManagement/UseReducersHook.tsx";
-import Memo from "./stateManagement/Memo.tsx";
+import TodoApp from "./stateManagement/TodoApp.tsx";
+// import Memo from "./stateManagement/Memo.tsx";
 // import UseStateHook from "./stateManagement/UseStateHook.tsx";
 // import DataFetching from "./partTwo/communicatingWithServer/fetchingData/DataFetching.tsx";
 // import ExchangeView from "./partTwo/communicatingWithServer/exchangeRateApi/ExchangeView.tsx";
@@ -25,7 +26,8 @@ function App() {
         {/*<DataFetching/>*/}
         {/*<ExchangeView/>*/}
         {/*<UseReducersHook/>*/}
-        <Memo/>
+        <TodoApp/>
+        {/*<Memo/>*/}
     </div>
   )
 }
