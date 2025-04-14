@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import {useRef} from "react";
 
 const UseRefs =()=>{
     // it is used to get reference to a html element
@@ -7,6 +7,7 @@ const UseRefs =()=>{
     return(
         <div>
             <input type={"text"} ref={inputRef}/>
+
         </div>
     )
 }
