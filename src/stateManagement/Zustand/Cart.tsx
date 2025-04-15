@@ -1,17 +1,10 @@
-import UseCartStore, {cartSelector, removeItems} from "./store/cartStore.ts";
+import UseCartStore, {cartSelector} from "./store/cartStore.ts";
 import {product} from "./Products.ts"
 
 
 const Cart =()=>{
-
-    // @ts-ignore
     const cart =UseCartStore((state)=>state)
     const cartItems =UseCartStore(cartSelector)
-
-
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
     return(
         <div>
             {cartItems.length>0?(

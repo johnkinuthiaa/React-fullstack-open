@@ -1,7 +1,15 @@
 import {create} from "zustand"
 import {product} from "../Products.ts"
 
-const UseCartStore =create((set)=>({
+
+interface CartState {
+    cart: product[],
+    addItems: (item: product) =>void,
+    removeItem: ({title}: product) =>void,
+    sortItems:()=>void,
+    clearCart:()=>void
+}
+const UseCartStore =create<CartState>()((set)=>({
     cart:[],
     addItems:
         (item:product)=>set((state: { cart: product[] })=>({
