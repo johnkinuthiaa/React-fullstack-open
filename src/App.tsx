@@ -1,6 +1,7 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
-import ZustandLib from "./stateManagement/Zustand/ZustandLib.tsx";
+// import ZustandLib from "./stateManagement/Zustand/ZustandLib.tsx";
+import PokemonUi from "./stateManagement/pokemonZustand/PokemonUi.tsx";
 // import UseRefs from "./stateManagement/UseRefs.tsx";
 // import UsePokemon, {PokemonType} from "./stateManagement/pokemon/UsePokemon.tsx";
 // import UseReducersHook from "./stateManagement/UseReducersHook.tsx";
@@ -33,12 +34,9 @@ function App() {
         {/*<Memo/>*/}
         {/*<UseRefs/>*/}
 
-        <ZustandLib/>
+        {/*<ZustandLib/>*/}
+        <PokemonUi/>
         {/*<div>{pokemon.map(({id,name}:PokemonType)=>(*/}
-        {/*    <div id={id.toString()}>*/}
-        {/*        <img*/}
-        {/*            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}/>*/}
-        {/*        <div>{name}</div>*/}
 
         {/*    </div>*/}
         {/*))}</div>*/}
