@@ -1,9 +1,10 @@
 import {products,product} from "./Products.ts"
 import Cart from "./Cart.tsx";
-import useCartStore from "./store/cartStore.ts";
+import UseCartStore from "./store/cartStore.ts";
 const ZustandLib =()=>{
+
     // @ts-ignore
-    const add=useCartStore((state)=>state.addToCart)
+    const ad =UseCartStore((state)=>state.addItems)
 
     return(
         <main>
@@ -18,7 +19,7 @@ const ZustandLib =()=>{
                     <div>Price:{prod.price} /kshs</div>
                     <div>Quantity in store:{prod.quantity}</div>
                     <button style={{backgroundColor:"black",color:"white",padding:"5px",cursor:"pointer",borderRadius:"5px"
-                        ,fontWeight:"bold"}} onClick={()=>add(prod)}>Add to cart</button>
+                        ,fontWeight:"bold"}} onClick={()=>ad(prod)}>Add to cart</button>
                 </div>
             ))}</div>
         </main>

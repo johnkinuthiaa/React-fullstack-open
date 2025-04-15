@@ -1,7 +1,8 @@
 // import Lesson1 from "./lesson1/Lesson1.tsx"
 import './App.css'
+import ZustandLib from "./stateManagement/Zustand/ZustandLib.tsx";
 // import UseRefs from "./stateManagement/UseRefs.tsx";
-import UsePokemon, {PokemonType} from "./stateManagement/pokemon/UsePokemon.tsx";
+// import UsePokemon, {PokemonType} from "./stateManagement/pokemon/UsePokemon.tsx";
 // import UseReducersHook from "./stateManagement/UseReducersHook.tsx";
 // import TodoApp from "./stateManagement/TodoApp.tsx";
 // import Memo from "./stateManagement/Memo.tsx";
@@ -16,7 +17,6 @@ import UsePokemon, {PokemonType} from "./stateManagement/pokemon/UsePokemon.tsx"
 // import StateManagement from "./ComponentStateAndEventHandlers/StateManagement.tsx";
 
 function App() {
-    const {pokemon} =UsePokemon()
     return (
     <div>
         {/*<Lesson1/>*/}
@@ -32,15 +32,17 @@ function App() {
         {/*<TodoApp/>*/}
         {/*<Memo/>*/}
         {/*<UseRefs/>*/}
-        <div>{pokemon.map(({id,name}:PokemonType)=>(
-            <div id={id.toString()}>
-                <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}/>
-                <div>{name}</div>
 
-            </div>
-        ))}</div>
-        );
+        <ZustandLib/>
+        {/*<div>{pokemon.map(({id,name}:PokemonType)=>(*/}
+        {/*    <div id={id.toString()}>*/}
+        {/*        <img*/}
+        {/*            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}/>*/}
+        {/*        <div>{name}</div>*/}
+
+        {/*    </div>*/}
+        {/*))}</div>*/}
+        {/*);*/}
     </div>
   )
 }

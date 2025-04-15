@@ -1,9 +1,20 @@
 import {create} from "zustand"
 import {product} from "../Products.ts"
 
-const useCartStore =create((set)=>({
+const UseCartStore =create((set)=>({
     cart:[],
-    // @ts-expect-error
-    addToCart:(product:product)=>set((state)=>({cart:[...state.cart,product]})),
+    addItems:
+        (item:product)=>set((state: { cart: product[] })=>({
+        cart:[...state.cart,item]
+    })),
+    clearCart:()=>set({cart:[]}),
+    removeItem:({title}:product)=>set((state: { cart: product[] })=>({
+        cart:[...state.cart.filter((item:product)=>item.title !==title)]
+    })),
+    sortItems:()=>set((state: { cart: product[] })=>({
+        cart:[...state.cart.sort((a,b)=>b.price-a.price)]
+    }))
 }))
-export default useCartStore
+export const cartSelector =(state: { cart: product[] })=>state.cart
+export const removeItems =(state: { removeItem: () => never })=>state.removeItem
+export default UseCartStore

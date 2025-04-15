@@ -1,19 +1,44 @@
-import useCartStore from "./store/cartStore.ts";
+import UseCartStore, {cartSelector, removeItems} from "./store/cartStore.ts";
 import {product} from "./Products.ts"
+
+
 const Cart =()=>{
+
     // @ts-ignore
-    const cart:product[] =useCartStore((state)=>state.cart)
-    console.log(JSON.stringify(cart))
+    const cart =UseCartStore((state)=>state)
+    const cartItems =UseCartStore(cartSelector)
+
+
+    // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
     return(
         <div>
-            {cart.length>0?(
-                cart?.map((item,index)=>(
-                    <div key={index}>{item?.title}</div>
-                ))
+            {cartItems.length>0?(
+                <div>
+                    <div>
+                        {cartItems.map((cartItem:product)=>(
+                            <div>
+                                {cartItem.title}
+                                <button onClick={(e)=>{
+                                    e.preventDefault()
+                                    console.log(cart.cart)
+                                    cart.removeItem(cartItem)
+                                }}>remove item</button>
+                            </div>
+                        ))}
+                    </div>
+                    <button onClick={(e)=>{
+                        e.preventDefault()
+                        console.log(cart.cart)
+                        cart.sortItems()
+                    }}>sort by price</button>
+                    <button onClick={cart.clearCart}>clear cart</button>
+                </div>
                 ):(
-                <div>cart is empty</div>
+                <div>Cart is empty</div>
             )}
-            </div>
+        </div>
     )
 }
 export default Cart
